@@ -116,6 +116,7 @@ function calc(id) {
 
     const file = document.querySelector('html');
     file.addEventListener('keydown', (e) => {
+        // alert(e.code);
         switch (e.code) {
             case 'Numpad1': populateDisplay(1); break;
             case 'Numpad2': populateDisplay(2); break;
@@ -126,5 +127,11 @@ function calc(id) {
             case 'Numpad7': populateDisplay(7); break;
             case 'Numpad8': populateDisplay(8); break;
             case 'Numpad9': populateDisplay(9); break;
+            case 'NumpadAdd': calc('add'); break;
+            case 'NumpadMultiply': calc('multiply'); break;
+            case 'NumpadDivide': calc('divide'); break;
+            case 'NumpadSubtract': calc('subtract'); break;
+            case 'Enter':
+            case 'NumpadEnter': calc('enter'); break;
         }
     })
